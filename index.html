@@ -57,24 +57,6 @@ const stretchDiff = stretchInit - stretchTarget;
 const maxYScale = 2.5;
 const body = document.body;
 
-let mySplitText = new SplitText('.txt', {type:"chars", charsClass:"char", position: "relative" }); 
-let chars = selectAll('.char');
-let txt = select('.txt');
-
-let numChars = chars.length;
-let isMouseDown = false;
-let letters = selectAll('.char');
-let mouseInitialY = 0;
-let mouseFinalY = 0;
-let distY = 0;
-let charIndexSelected = 0;
-let charH = 0;
-let elasticDropOff = 0.8; // The higher the value the less dispersion of elasticity.
-let dragYScale = 0;
-
-const currentPage = window.location.pathname;  
-
-menuItems.forEach(item => {
 
   if (item.textContent.toLowerCase() === "home" && currentPage === "/") {
     item.classList.add('active');  
