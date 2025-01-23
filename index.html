@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Navbar Animation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  </head>
+  <body>
+
+    <div class="navbar">
+      <!-- Button placed on the left -->
+      <div class="left-button">
+        <i class="fas fa-shopping-cart"></i> <!-- Shopping cart icon -->
+      </div>
+  
+      <!-- Logo centered in the navbar -->
+      <div class="logo">
+        <img src="assets/images/loading.png" alt="Logo">
+      </div>
+  
+      <!-- Dropdown menu on the right -->
+      <div class="menu">
+        <button class="menu-button">MENU <span>&#9660;</span></button>
+        <div class="menu-overlay">
+          <ul class="menu-list">
+            <li class="active">HOME</li>
+            <li>PRODUCT</li>
+            <li>GALLERY</li>
+            <li>CONTACT US</li>
+            <li>ABOUT US</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Style Your Wardrobe</h1>
+        <p>Discover the latest trends in fashion at unbeatable prices. Find your perfect style today!
+
+          
+const menuItems = document.querySelectorAll('.menu-list li');
+
+const style = getComputedStyle(document.body)
+const stage = select('.stage');
+const weightInit = style.getPropertyValue('--fw'); // 600 in example
+const weightTarget = 400; // 100-800
+const weightDiff = weightInit - weightTarget;
+const stretchInit = style.getPropertyValue('--fs'); // 150 in example
+const stretchTarget = 80; // 10-200
+const stretchDiff = stretchInit - stretchTarget;
+const maxYScale = 2.5;
+const body = document.body;
+
+let mySplitText = new SplitText('.txt', {type:"chars", charsClass:"char", position: "relative" }); 
+let chars = selectAll('.char');
+let txt = select('.txt');
+
+let numChars = chars.length;
+let isMouseDown = false;
+let letters = selectAll('.char');
+let mouseInitialY = 0;
+let mouseFinalY = 0;
+let distY = 0;
+let charIndexSelected = 0;
+let charH = 0;
+let elasticDropOff = 0.8; // The higher the value the less dispersion of elasticity.
+let dragYScale = 0;
+
+const currentPage = window.location.pathname;  
+
+menuItems.forEach(item => {
+
+  if (item.textContent.toLowerCase() === "home" && currentPage === "/") {
+    item.classList.add('active');  
+  } else if (currentPage.includes(item.textContent.toLowerCase())) {
+    item.classList.add('active');  
+  }
+});
+
+        </p>
+        <a href="#shop-now" class="cta-button">Shop Now</a>
+      </div>
+
+    </section>
+  
+    <!-- Footer (Optional) -->
+    <footer class="footer">
+      <p>&copy; 2025 Clothing Store. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
