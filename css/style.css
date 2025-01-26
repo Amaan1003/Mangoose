@@ -64,3 +64,16 @@
       margin-top: 20px;
     }
   }
+
+
+  /* Red Dot Style */
+#red-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure it doesn't interfere with clicks or touches */
+  z-index: 9999; /* Always appear on top */
+  display: none; /* Initially hidden */
+}

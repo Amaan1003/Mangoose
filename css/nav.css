@@ -226,3 +226,36 @@ body {
     font-size: 20px;
   }
 }
+
+
+/* Glowing Effect */
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Navbar with Glowing Border */
+.navbar {
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  animation: glowing-border 1.5s infinite;
+  border-radius: 5px; /* Optional: Add rounding for the border */
+}
+
+/* Glowing Effect for Left Button (Menu Icon) */
+.left-button {
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  animation: glowing-border 1.5s infinite;
+}
+
+/* Glowing Effect for Right Button (Shopping Cart) */
+.menu-button {
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  animation: glowing-border 1.5s infinite;
+}
