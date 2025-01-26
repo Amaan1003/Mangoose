@@ -31,3 +31,93 @@
     height: 100%;
     object-fit: cover; /* Ensures the image covers the screen */
   }
+
+  /* Position the text overlay */
+.carousel-container {
+  position: relative;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Make text visible against the background */
+  z-index: 2; /* Place text above the carousel */
+}
+
+.carousel-text h1 {
+  font-size: 3rem;
+  font-family: 'Garamond', serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+  margin: 0 0 10px;
+}
+
+.carousel-text p {
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* Make text responsive */
+@media (max-width: 768px) {
+  .carousel-text h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Position the text overlay */
+.carousel-container {
+    position: relative;
+  }
+  
+  .carousel-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Place text above the carousel */
+  }
+  
+  .carousel-text h1 {
+    font-size: 3rem;
+    font-family: 'Garamond', serif;
+    color: white; /* Main text color */
+    text-shadow: 
+      -1px -1px 0 #000, /* Top-left shadow (black) */
+      1px -1px 0 #000, /* Top-right shadow (black) */
+      -1px 1px 0 #000, /* Bottom-left shadow (black) */
+      1px 1px 0 #000; /* Bottom-right shadow (black) */
+    margin: 0 0 10px;
+  }
+  
+  .carousel-text p {
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    color: white; /* Main text color */
+    text-shadow: 
+      -1px -1px 0 #000, 
+      1px -1px 0 #000, 
+      -1px 1px 0 #000, 
+      1px 1px 0 #000;
+    margin: 0;
+  }
+  
+  /* Make text responsive */
+  @media (max-width: 768px) {
+    .carousel-text h1 {
+      font-size: 2rem;
+    }
+  
+    .carousel-text p {
+      font-size: 1rem;
+    }
+  }
+  

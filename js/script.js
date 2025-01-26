@@ -67,3 +67,8 @@ document.addEventListener("touchstart", (event) => {
   redDot.style.left = `${touch.clientX + window.scrollX}px`;
   redDot.style.top = `${touch.clientY + window.scrollY}px`;
 });
+
+// pupup offer
+function closePopup() {
+  document.querySelector(".triangle-popup").style.display = "none";
+}

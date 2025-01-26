@@ -77,3 +77,164 @@
   z-index: 9999; /* Always appear on top */
   display: none; /* Initially hidden */
 }
+
+
+/* Triangular Popup */
+.triangle-popup {
+  position: fixed;
+  border: 1.5px solid rgb(0, 0, 0);
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: white;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Popup Content */
+.popup-content {
+  position: relative;
+  transform: rotate(-45deg); /* Rotate text for triangular alignment */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+/* Close Button */
+.close-button {
+  transform: rotate(-45deg)important;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover {
+  background: red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .triangle-popup {
+    width: 100px;
+    height: 100px;
+  }
+  .popup-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* Parent container for cards */
+.scoped-row {
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+  flex-wrap: wrap; /* Wrap to a new row if space is insufficient */
+}
+
+/* Individual card container */
+.scoped-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card styling */
+.scoped-card {
+  height: 420px;
+  width: 320px;
+  background-color: #000000;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.scoped-card::before {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: -10%;
+  background-color: #79797988;
+  transform: skewY(345deg);
+  transition: 2s ease-in;
+}
+
+.scoped-card:hover::before {
+  top: 0;
+  transform: skewY(390deg);
+}
+
+.scoped-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure image is above the red overlay */
+}
+
+.scoped-image img {
+  max-width: 100%;
+  transition: 2s ease-in;
+}
+
+.scoped-card:hover .scoped-image img {
+  width: 80%;
+}
+
+.scoped-about-product {
+  position: absolute;
+  color: #000000;
+  bottom: -65px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2; /* Ensure the text is above the red overlay */
+  transition: 1s ease-in;
+}
+
+.scoped-card:hover .scoped-about-product {
+  bottom: 20px;
+}
+
+.scoped-btn {
+  color: #fff;
+  background-color: #000000;
+  border: white solid 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.scoped-btn:hover {
+  background-color: #15ff00;
+}

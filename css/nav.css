@@ -231,22 +231,17 @@ body {
 /* Glowing Effect */
 @keyframes glowing-border {
   0% {
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 1px rgb(255, 255, 255);
   }
   50% {
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 2px rgb(255, 255, 255);
   }
   100% {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 4px rgb(255, 255, 255);
   }
 }
 
-/* Navbar with Glowing Border */
-.navbar {
-  border: 0.5px solid rgba(255, 255, 255, 0.5);
-  animation: glowing-border 1.5s infinite;
-  border-radius: 5px; /* Optional: Add rounding for the border */
-}
+
 
 /* Glowing Effect for Left Button (Menu Icon) */
 .left-button {
