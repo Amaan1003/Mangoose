@@ -57,6 +57,7 @@ body {
 
 /* Menu Button */
 .menu-button {
+  font-family: "Orbitron", arial;
   background-color: #020202;
   border: none;
   border-radius: 20px;
@@ -113,6 +114,7 @@ body {
 }
 
 .menu-list li {
+  font-family: "Orbitron", arial;
   font-size: 30px;
   color: white;
   margin: 25px 0;

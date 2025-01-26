@@ -1,4 +1,13 @@
-/* Ensure content is below the navbar */
+/* CSS class for applying Orbitron font with specific weight */
+.orbitron-unique {
+  font-family: "Orbitron", serif !important;
+}
+.orbitron-unique {
+  font-family: "Orbitron", Arial, sans-serif !important;
+}
+
+
+
 .carousel-section {
     margin-top: 70px; /* Push the carousel below the navbar */
     width: 100vw;
@@ -39,6 +48,7 @@
 
 .carousel-text {
   position: absolute;
+  
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%);
@@ -48,15 +58,17 @@
 }
 
 .carousel-text h1 {
+  font-family: "Orbitron", arial;
+  font-weight: 700; /* Bold weight */
   font-size: 3rem;
-  font-family: 'Garamond', serif;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
   margin: 0 0 10px;
 }
 
 .carousel-text p {
+  font-family: "Orbitron", serif;
+  font-weight: 400; /* Regular weight */
   font-size: 1.5rem;
-  font-family: 'Arial', sans-serif;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   margin: 0;
 }
@@ -120,4 +132,187 @@
       font-size: 1rem;
     }
   }
+
   
+
+/* Overall container */
+.container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Heading styles */
+.heading {
+  font-family: "Orbitron", arial;
+  font-size: 52px;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Wrapper for cards */
+.card-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure cards are in a row */
+  justify-content: center; /* Align cards to the center */
+  gap: 15px; /* Space between cards */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  padding: 10px; /* Adjust padding if needed */
+}
+
+.container, .card-wrapper {
+  margin: 0 auto; /* Center the container */
+  padding: 0; /* Remove any extra padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+
+
+/* Custom card styles (as provided) */
+.custom-card {
+  height: 450px;
+  width: 350px;
+  background-color: #000000;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: center;  /* Cards will snap to center */
+}
+.custom-card::before {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  content: "";
+  top: -50%;
+  left: -50%;
+  background-color: #e7dede9a;
+  transform: skewY(345deg);
+  transition: 1.5s ease-in-out;
+}
+
+.custom-card:hover::before {
+  top: -10%;
+  transform: skewY(390deg);
+}
+
+.custom-image {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.custom-image img {
+  max-width: 80%;
+  transition: 1.5s ease-in-out;
+}
+
+.custom-card:hover .custom-image img {
+  width: 70%;
+}
+
+.custom-about-product {
+  position: absolute;
+  color: #fff;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.custom-card:hover .custom-about-product {
+  bottom: 40px;
+}
+
+.custom-about-product h3 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.custom-about-product h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.custom-btn {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #3ac717;
+}
+
+/* Responsive styles for tablets and mobile screens */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    gap: 15px;  /* Adjust gap for tablet */
+  }
+  .custom-card {
+    width: 60%;  /* Adjust card width on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    gap: 10px;  /* Adjust gap for tablets and mobiles */
+  }
+  .custom-card {
+    flex-shrink: 0;  /* Prevent cards from shrinking */
+    width: 48%;  /* Adjust card width on smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 18px;  /* Adjust font size of heading */
+  }
+  .card-wrapper {
+    gap: 15px;  /* Reduce gap between cards on mobile */
+  }
+  .custom-card {
+    height: 250px;  /* Reduce height on mobile */
+    width: 40%;  /* Adjust width to make the cards fit on the screen */
+  }
+  .custom-about-product h3 {
+    font-size: 14px;  /* Make text smaller */
+  }
+  .custom-about-product h4 {
+    font-size: 12px;  /* Make text smaller */
+  }
+  .custom-btn {
+    font-size: 12px;  /* Make button text smaller */
+    padding: 8px 15px;  /* Reduce padding */
+  }
+}
+
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+  .orbitron-unique {
+    font-size: 24px; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .orbitron-unique {
+    font-size: 18px; /* Even smaller font size for mobile */
+  }
+}
