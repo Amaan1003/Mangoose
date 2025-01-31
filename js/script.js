@@ -104,7 +104,36 @@ window.addEventListener('load', () => {
   cursorDot.style.top = `${window.innerHeight/2}px`;
 });
 
-// pupup offer
+// Popup Offer
 function closePopup() {
-  document.querySelector(".triangle-popup").style.display = "none";
+  const popup = document.querySelector(".triangle-popup");
+  popup.style.opacity = "0";
+  popup.style.transform = "translateY(20px)";
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 300); // Match the fade-out duration
 }
+
+// JavaScript for additional interactions
+document.addEventListener('DOMContentLoaded', () => {
+  // Parallax effect
+  document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth - e.pageX) / 30;
+    const y = (window.innerHeight - e.pageY) / 30;
+    document.querySelector('.hero-content').style.transform = 
+      `translate(${x}px, ${y}px)`;
+  });
+
+  // Scroll animation trigger
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  });
+
+  document.querySelectorAll('.animated-subtitle, .main-title').forEach(el => {
+    observer.observe(el);
+  });
+});

@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -21,6 +21,48 @@
   <body>
     <div id="cursor-dot"></div>
 
+    <div class="preloader">
+      <div class="preloader-content">
+        <!-- Floating Mongoose Text -->
+        <div class="floating-text">
+          <span>M</span>
+          <span>O</span>
+          <span>N</span>
+          <span>G</span>
+          <span>O</span>
+          <span>O</span>
+          <span>S</span>
+          <span>E</span>
+        </div>
+    
+        <!-- Particle Effects -->
+        <div class="particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+    
+        <!-- Loading Bar -->
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+
+
+<!--
+<div class="announcement-bar">
+  <div class="scrolling-text">
+    <span>🔥 Limited Time Offer! Get 30% Off on All Trackpants 🔥</span>
+    <span aria-hidden="true">🔥 Limited Time Offer! Get 30% Off on All Trackpants 🔥</span>
+  </div>
+</div>
+-->
     <div class="navbar">
       <div class="left-button">
         <i class="fas fa-shopping-cart"></i>
@@ -45,38 +87,93 @@
       </div>
     </div>
 
-    <section class="carousel-section">
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="carousel-slide">
-            <img src="assets/images/carausal/carausal (1).jpeg" alt="Slide 1">
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/carausal/carausal (2).jpeg" alt="Slide 2">
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/carausal/carausal (3).jpeg" alt="Slide 3">
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/carausal/carausal (4).jpeg" alt="Slide 4">
-          </div>
-        </div>
-        <!-- Add a text overlay -->
-        <div class="carousel-text">
-          <h1 class="orbitron-unique">Style Your Wardrobe</h1>
-          <p class="orbitron-unique">Discover the latest Trackpants in fashion and make them yours.</p>          
-        </div>
-      </div>
-    </section>
-    
-    <div class="triangle-popup">
-      <div class="popup-content">
-        <p>Get 10% Off</p>
-      </div>
-      <button class="close-button" onclick="closePopup()">×</button>
+
+<section class="fashion-hero">
+  <div class="animated-background">
+    <div class="image-slider">
+      <img src="assets/images/carausal/track.png" alt="Image 1">
+      <img src="assets/images/carausal/track 2.jpg" alt="Image 2">
+      <img src="assets/images/carausal/track 3.jpg" alt="Image 3">
+      <img src="assets/images/carausal/track 2.jpg" alt="Image 4">
+      <!-- Duplicate first image for seamless loop -->
+      <img src="assets/images/carausal/track.png" alt="Image 1">
+    </div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="text-reveal">
+      <p class="animated-subtitle">We provide all styles of Trackpant</p>
+      <p class="animated-subtitle">Products with fresh models and new designs</p>
     </div>
 
-    <div class="container">
+    <h1 class="main-title">
+      <span class="freshi">MANGOOSE</span>
+      <span class="spirit-text">FASHION ARE<br>THE SPIRIT</span>
+    </h1>
+</section>
+
+<section class="latest-products">
+  <h2 class="section-title">Latest Products</h2>
+  <div class="product-grid">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/carausal/track.png" alt="Product 1">
+        <div class="overlay">
+          <button class="buy-button">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Trackpants - Classic</h3>
+        <p class="product-price">Rs 999</p>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/carausal/track.png" alt="Product 2">
+        <div class="overlay">
+          <button class="buy-button">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Trackpants - Sporty</h3>
+        <p class="product-price">Rs 999</p>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/carausal/track.png" alt="Product 3">
+        <div class="overlay">
+          <button class="buy-button">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Trackpants - Premium</h3>
+        <p class="product-price">Rs 999</p>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/carausal/track.png" alt="Product 4">
+        <div class="overlay">
+          <button class="buy-button">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Trackpants - Urban</h3>
+        <p class="product-price">Rs 999</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!--- <div class="container">
       <h2 class="heading">Latest Launch</h2>
       <div class="card-wrapper">
         <div class="custom-card text-center">
@@ -120,7 +217,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     
   
     <!-- Footer (Optional) -->
@@ -129,5 +226,7 @@
     </footer>
     
     <script src="js/script.js"></script>
+    <script src="js/hero.js"></script>
+        <script src="js/preloader.js"></script>
   </body>
 </html>
