@@ -26,16 +26,39 @@ body {
 
 
   /* Red Dot Style */
-#red-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none; /* Ensure it doesn't interfere with clicks or touches */
-  z-index: 9999; /* Always appear on top */
-  display: none; /* Initially hidden */
-}
+  #cursor-dot {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at center, #c59a63 0%, #754E1A 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: 
+      left 0.1s linear,
+      top 0.1s linear,
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+    display: none;
+  }
+  
+  #cursor-dot.active {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(0.8); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+  
+  @media (pointer: coarse) {
+    #cursor-dot {
+      display: none !important;
+    }
+  }
 
 
 /* Triangular Popup */

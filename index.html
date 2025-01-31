@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mangoose</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -18,23 +19,20 @@
 
   </head>
   <body>
-    <div id="red-dot"></div>
+    <div id="cursor-dot"></div>
 
     <div class="navbar">
-      <!-- Button placed on the left -->
       <div class="left-button">
-        <i class="fas fa-shopping-cart"></i> <!-- Shopping cart icon -->
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
       </div>
-  
       
-      <!-- Logo centered in the navbar -->
       <div class="logo">
-        <img src="assets/images/loading.png" alt="Logo">
+        <img src="assets/images/mangoose logo.png" alt="Logo">
       </div>
       
-      <!-- Dropdown menu on the right -->
       <div class="menu">
-        <button class="menu-button">MENU <span>&#9660;</span></button>
+        <button class="menu-button">MENU <span class="dropdown-arrow">&#9660;</span></button>
         <div class="menu-overlay">
           <ul class="menu-list">
             <li class="active">HOME</li>
